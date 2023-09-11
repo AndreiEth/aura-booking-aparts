@@ -177,7 +177,7 @@ button {
 }
 
 @media screen and (max-width: 1023px) {
-  .nav__manu {
+  .nav__menu {
     position: fixed;
     bottom: 2rem;
     background-color: var(--container-color);
@@ -214,7 +214,14 @@ button {
 }
 
 /* Change background header */
+.scroll-header {
+  background-color: var(--body-color);
+  box-shadow: 0 1px 4px hsla(228, 4%, 15%, 0.1);
+}
 
+.scroll-header .nav__logo {
+  color: var(--first-color);
+}
 /* Active link */
 
 /*=============== HOME ===============*/
@@ -334,19 +341,85 @@ button {
 }
 
 .button:hover {
-	box-shadow: 0 4px 12px hsla(228, 66%, 45%, 0.25); 
+  box-shadow: 0 4px 12px hsla(228, 66%, 45%, 0.25);
 }
 
-.nac__buttton{
-	display: none;
-	
+.nac__buttton {
+  display: none;
 }
-/*=============== LOGOS ===============*/
 
 /*=============== POPULAR ===============*/
+.popular__container {
+  padding: 1rem 0 5rem;
+}
 
+.popular__card {
+  width: 290px;
+  background-color: var(--container-color);
+  padding: 0.5rem 0.5rem 1.5rem;
+  border-radius: 1rem;
+  margin: 0 auto;
+  transition: 0.4s;
+}
+
+.popular__img {
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.popular__data {
+  padding: 0 1rem 0, 5rem;
+}
+
+.popular__price {
+  font-size: var(--h2-font-size);
+  color: var(--text-color);
+  margin-bottom: 0.25rem;
+}
+
+.popular__price span {
+  color: var(--second-color);
+}
+
+.popular__title {
+  font-size: var(--h3-font-size);
+  margin-bottom: 0.75rem;
+}
+
+.popular__description {
+  font-size: var(--small-font-size);
+}
+
+.popular__card:hover {
+  box-shadow: 0 12px 16px hsla(228, 66%, 45%, 0.1);
+}
 /* Swiper class */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: "";
+}
 
+.swiper-button-next,
+.swiper-button-prev {
+  top: initial;
+  bottom: 0;
+  width: initial;
+  height: initial;
+  background-color: var(--container-color);
+  border: 2px solid var(--text-color-light);
+  padding: 6px;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  color: var(--first-color);
+}
+
+.swiper-button-prev {
+  left: calc(50% - 3rem);
+}
+
+.swiper-button-next {
+  right: calc(50% - 3rem);
+}
 /*=============== VALUE ===============*/
 
 /*Rotate icon and add shadows*/
