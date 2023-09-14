@@ -432,6 +432,60 @@ body.dark-theme {
 }
 
 /*=============== POPULAR ===============*/
+
+.popular__room {
+  display: flex;
+  flex-direction: row;
+}
+
+.popular__carousel,
+.popular__card-content {
+  flex: 1;
+  padding: 0.5rem;
+}
+
+.popular__paragraph {
+  font-size: var(--normal-font-size);
+  margin-bottom: 2.5rem;
+}
+
+.popular__info {
+  display: flex;
+  flex-direction: row;
+}
+.popular__price-tag {
+  font-size: medium;
+  margin-bottom: 5px;
+}
+.popular__list,
+.popular__price {
+  flex: 1;
+  padding: 0.5rem;
+}
+
+.popular__price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#b {
+  color: var(--title-color);
+}
+
+#popular-button1 {
+  margin-bottom: 5px;
+}
+#popular-button1,
+#popular-button2 {
+  padding: 7px 14px;
+}
+
+/* .popular__carousel{
+width: ;
+} */
+
 .popular__container {
   padding: 1rem 0 5rem;
 }
