@@ -945,6 +945,19 @@ width: ;
   .nav__button {
     display: none;
   }
+
+  .popular__room {
+    flex-direction: column;
+  }
+  .popular__price-tag{
+	text-align: center;
+  }
+}
+
+@media screen and (max-width:420px) {
+	.popular__info {
+    flex-direction: column;
+}
 }
 
 @media screen and (min-width: 320px) {
@@ -992,6 +1005,12 @@ width: ;
   .nav__button {
     display: none;
   }
+  .popular__room {
+    flex-direction: column;
+  }
+  .popular__price-tag{
+	text-align: center;
+  }
 }
 /* For medium devices */
 
@@ -1014,6 +1033,10 @@ width: ;
 
   .nav__button {
     display: none;
+  }
+
+  .popular__room {
+    flex-direction: column;
   }
 }
 
