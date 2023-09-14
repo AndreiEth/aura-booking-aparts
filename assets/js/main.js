@@ -117,3 +117,19 @@ themeBtn.addEventListener("click", () => {
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
 /*=============== SCROLL REVEAL ANIMATION ===============*/
+
+const sr = ScrollReveal({
+  origin: "top",
+  distance: "60px",
+  duration: 2500,
+  delay: 400,
+  reset:false
+});
+
+sr.reveal(`.home_title`);
+sr.reveal(`.home__description`, { delay: 200 });
+sr.reveal(`.home__search`, { delay: 300 });
+sr.reveal(`.home__value`, { delay: 400 });
+sr.reveal(`.home__images`, { delay: 500, origin: "bottom" });
+sr.reveal(`.value__images, .contact__content`, { origin: "left" });
+sr.reveal(`.value__content, .contact__images`, { origin: "right"});
