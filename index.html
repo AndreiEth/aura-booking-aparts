@@ -21,9 +21,14 @@
     />
 
     <!--=============== SWIPER CSS ===============-->
-    <link
+    <!-- <link
       rel="stylesheet"
       href="./assets/css/cdn.jsdelivr.net_npm_swiper@10.2.0_swiper-bundle.min.css"
+    /> -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
 
     <!--=============== CSS ===============-->
@@ -169,39 +174,91 @@
           <span class="section__subtitle">Лучший вариант</span>
           <h2 class="section__title">Апартамент</h2>
 
-		  <div class="popular__room">
-			<div class="popular__carousel">
-				<img src="./assets/img/popular2.jpg" alt="">
-			</div>
-			<div class="popular__card-content">
-				<h2 class="popular__title">Квартира-студия №3 на ул. Братьев Габайраевых</h2>
-				<p class="popular__paragraph">Современная квартира-студия, наполненная солнечным светом, ждёт своих дорогих гостей. Терракотовый цвет обволакивает вас теплом и уютом. А нежный плед и мягкие подушки приглашают ваше усталое тело отдохнуть и расслабиться. В такой обстановке вы моментально забудете о городской суете и заботах. А горы на стене напомнят о наших достопримечательностях</p>
-				<div class="popular__info-container">
-					<div class="popular__info">
-						<ul class="popular__list">
-							<li>
-								Тип апартаментов : <b id="b">Студия</b>
-							</li>
-							<li>
-								Площадь : <b id="b">24 м²</b>
-							</li>
-							<li>
-								Спальных мест : <b id="b">4</b>
-							</li>
-							<li>
-								Этаж : <b id="b">1 из 3 </b>
-							</li>
-						</ul>
-						<div class="popular__price">
-						<h3 class="popular__price-tag">Стоимость
-от 2200 ₽/сутки</h3>
-						<button class="button" id="popular-button1">Подробнее <i class='bx bx-expand'></i></button>
-						<button class="button" id="popular-button2">Забронировать <i class='bx bxs-bell' ></i></button>
-					</div>
-					</div>
-				</div>
-			</div>
-		</div>
+          <div class="popular__room">
+            <div class="popular__carousel swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="./assets/img/popular2.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./assets/img/popular1.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./assets/img/popular3.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./assets/img/popular2.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./assets/img/popular3.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./assets/img/popular1.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+
+            <div class="popular__card-content">
+              <h2 class="popular__title">
+                Квартира-студия №3 на ул. Братьев Габайраевых
+              </h2>
+              <p class="popular__paragraph">
+                Современная квартира-студия, наполненная солнечным светом, ждёт
+                своих дорогих гостей. Терракотовый цвет обволакивает вас теплом
+                и уютом. А нежный плед и мягкие подушки приглашают ваше усталое
+                тело отдохнуть и расслабиться. В такой обстановке вы моментально
+                забудете о городской суете и заботах. А горы на стене напомнят о
+                наших достопримечательностях
+              </p>
+              <div class="popular__info-container">
+                <div class="popular__info">
+                  <ul class="popular__list">
+                    <li>Тип апартаментов : <b id="b">Студия</b></li>
+                    <li>Площадь : <b id="b">24 м²</b></li>
+                    <li>Спальных мест : <b id="b">4</b></li>
+                    <li>Этаж : <b id="b">1 из 3 </b></li>
+                  </ul>
+                  <div class="popular__price">
+                    <h3 class="popular__price-tag">
+                      Стоимость от 2200 ₽/сутки
+                    </h3>
+                    <button
+                      class="button"
+                      id="popular-button1"
+                    >
+                      Подробнее <i class="bx bx-expand"></i>
+                    </button>
+                    <button
+                      class="button"
+                      id="popular-button2"
+                    >
+                      Забронировать <i class="bx bxs-bell"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <!-- <div class="popular__container swiper">
             <div class="swiper-wrapper">
@@ -425,8 +482,8 @@
               <span class="section__subtitle">Связаться с нами</span>
               <h2 class="section__tittle">Легко связаться с нами</h2>
               <p class="contact__description">
-                Есть ли проблема найти дом своей мечты? или нужна консультация по жилищным вопросам?
-                 просто свяжитесь с нами.
+                Есть ли проблема найти дом своей мечты? или нужна консультация
+                по жилищным вопросам? просто свяжитесь с нами.
               </p>
             </div>
 
@@ -440,7 +497,9 @@
                     <p class="contact__card-description">8-900-888-55-44</p>
                   </div>
                 </div>
-                <button class="button contact__card-button">Позвонить сейчас</button>
+                <button class="button contact__card-button">
+                  Позвонить сейчас
+                </button>
               </div>
 
               <div class="contact__card-box">
@@ -452,7 +511,9 @@
                     <p class="contact__card-description">whatsup</p>
                   </div>
                 </div>
-                <button class="button contact__card-button">Написать сейчас</button>
+                <button class="button contact__card-button">
+                  Написать сейчас
+                </button>
               </div>
             </div>
           </div>
@@ -621,7 +682,8 @@
     <script src="https://unpkg.com/scrollreveal"></script>
 
     <!--=============== SWIPER JS ===============-->
-    <script src="./assets/js/cdn.jsdelivr.net_npm_swiper@10.2.0_swiper-bundle.min.js"></script>
+    <!-- <script src="./assets/js/cdn.jsdelivr.net_npm_swiper@10.2.0_swiper-bundle.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
     <!--=============== MAIN JS ===============-->
     <script src="./assets/js/main.js"></script>

@@ -10,12 +10,19 @@ function scrollHeader() {
 window.addEventListener("scroll", scrollHeader);
 
 /*=============== SWIPER POPULAR ===============*/
-var swiper = new Swiper(".popular__container", {
-  spaceBetween: 32,
+var swiper = new Swiper(".popular__carousel", {
+  spaceBetween: 20,
   grabCursor: true,
-  centeredSlides: true,
-  slidesPreview: "auto",
   loop: true,
+  slidesPerView: "auto",
+  centeredSlides: true,
+  keyboard: {
+    enabled: true,
+  },
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
 
   navigation: {
     nextEl: ".swiper-button-next",
@@ -123,7 +130,7 @@ const sr = ScrollReveal({
   distance: "60px",
   duration: 2500,
   delay: 400,
-  reset:false
+  reset: false,
 });
 
 sr.reveal(`.home_title`);
@@ -132,4 +139,4 @@ sr.reveal(`.home__search`, { delay: 300 });
 sr.reveal(`.home__value`, { delay: 400 });
 sr.reveal(`.home__images`, { delay: 500, origin: "bottom" });
 sr.reveal(`.value__images, .contact__content`, { origin: "left" });
-sr.reveal(`.value__content, .contact__images`, { origin: "right"});
+sr.reveal(`.value__content, .contact__images`, { origin: "right" });
