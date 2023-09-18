@@ -978,11 +978,18 @@ width: ;
   .popular__price-tag {
     text-align: center;
   }
+
+  .swiper-slide {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 420px) {
   .popular__info {
     flex-direction: column;
+  }
+  .swiper-slide {
+    width: 100%;
   }
 }
 
@@ -1037,6 +1044,9 @@ width: ;
   .popular__price-tag {
     text-align: center;
   }
+  .swiper-slide {
+    width: 100%;
+  }
 }
 /* For medium devices */
 
@@ -1063,6 +1073,10 @@ width: ;
 
   .popular__room {
     flex-direction: column;
+  }
+
+  .swiper-slide {
+    width: 60%;
   }
 }
 
