@@ -35,8 +35,8 @@
   --font-semi-bold: 600;
 
   /*========== z index ==========*/
-  --z-tooltip: 10;
-  --z-fixed: 100;
+  --z-tooltip: 4;
+  --z-fixed: 5;
 }
 
 /* Responsive typography */
@@ -947,6 +947,80 @@ width: ;
 .show-scroll {
   bottom: 8rem;
 }
+
+/*=============== POPUP ===============*/
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  z-index: 10;
+  background-color: var(--body-color);
+  width: 70%;
+  border-radius: 12px;
+  padding: 20px;
+  max-height: 100vh !important;
+  border: 1px solid var(--first-color);
+  overflow-y: unset;
+  overflow-x: hidden;
+}
+
+.popup::-webkit-scrollbar {
+  display: none;
+}
+
+.popup.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.popup__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popup__close__btn {
+  position: fixed;
+  right: 1%;
+  top: 0;
+  left: auto;
+  z-index: 11;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 2rem;
+  rotate: 45deg;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.popup__close__btn:hover {
+  color: var(--first-color);
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+  transition: 200ms ease-in-out;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  z-index: 9;
+  opacity: 1;
+  pointer-events: all;
+}
+
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 @media screen and (max-width: 350px) {
@@ -990,6 +1064,9 @@ width: ;
   }
   .swiper-slide {
     width: 100%;
+  }
+  .popup {
+    width: 90%;
   }
 }
 

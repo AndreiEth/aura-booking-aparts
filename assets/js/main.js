@@ -140,3 +140,48 @@ sr.reveal(`.home__value`, { delay: 400 });
 sr.reveal(`.home__images`, { delay: 500, origin: "bottom" });
 sr.reveal(`.value__images, .contact__content`, { origin: "left" });
 sr.reveal(`.value__content, .contact__images`, { origin: "right" });
+
+/*=============== POPUP ===============*/
+
+const openPopupButtons = document.querySelectorAll("[data-modal-target]");
+const closePopupButtons = document.querySelectorAll("[data-close-button]");
+
+const overlay = document.getElementById("overlay");
+
+openPopupButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const popup = document.querySelector(button.dataset.modalTarget);
+    openModal(popup);
+  });
+});
+
+closePopupButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const popup = button.closest(".popup");
+    closeModal(popup);
+  });
+});
+
+overlay.addEventListener("click", () => {
+  const popups = document.querySelectorAll(".popup.active");
+  popups.forEach((popup) => {
+    closeModal(popup);
+  });
+});
+overlay.addEventListener("scroll", () => {
+  
+});
+
+function openModal(popup) {
+  if (popup == null) return;
+  popup.classList.add("active");
+  overlay.classList.add("active");
+  document.body.style.overflow = "hidden";
+}
+
+function closeModal(popup) {
+  if (popup == null) return;
+  popup.classList.remove("active");
+  overlay.classList.remove("active");
+  document.body.style.overflow = "";
+}
