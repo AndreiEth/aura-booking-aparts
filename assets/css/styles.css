@@ -1001,7 +1001,7 @@ width: ;
   align-items: center;
 }
 
-.popup__close__btn {
+.popup__close-btn {
   position: fixed;
   right: 1%;
   top: 0;
@@ -1018,7 +1018,7 @@ width: ;
   cursor: pointer;
 }
 
-.popup__close__btn:hover {
+.popup__close-btn:hover {
   color: var(--first-color);
 }
 
